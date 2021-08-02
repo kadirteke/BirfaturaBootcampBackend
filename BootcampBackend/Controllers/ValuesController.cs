@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BootcampBackend.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +10,11 @@ namespace BootcampBackend.Controllers
 {
 	public class ValuesController : ApiController
 	{
-		// GET api/<controller>
-		public IEnumerable<string> Get()
+		// GET api/<controller>l
+		public IEnumerable<Deneme> Get()
 		{
-			return new string[] { "value1", "value2" };
+			BootcampEntities ent = new BootcampEntities();
+			return ent.Denemes.ToList();
 		}
 
 		// GET api/<controller>/5
@@ -21,9 +23,13 @@ namespace BootcampBackend.Controllers
 			return "value";
 		}
 
-		// POST api/<controller>
-		public void Post([FromBody] string value)
+		// POST api/<controller>		
+		public void Post([FromBody] Deneme value)
 		{
+			BootcampEntities ent = new BootcampEntities();
+			ent.Denemes.Add(value);
+			ent.SaveChanges();
+			string a = "";
 		}
 
 		// PUT api/<controller>/5
