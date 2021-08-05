@@ -4,8 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="17b057231f154178965180a9da06370a" Name="Diagram1">
+      <Diagram DiagramId="17b057231f154178965180a9da06370a" Name="Diagram1" ZoomLevel="97">
         <EntityTypeShape EntityType="BootcampModel.Deneme" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BootcampModel.AspNetRole" Width="1.5" PointX="3.75" PointY="2.5" />
+        <EntityTypeShape EntityType="BootcampModel.AspNetUserClaim" Width="1.5" PointX="8.25" PointY="1" />
+        <EntityTypeShape EntityType="BootcampModel.AspNetUserLogin" Width="1.5" PointX="8.25" PointY="3.75" />
+        <EntityTypeShape EntityType="BootcampModel.AspNetUser" Width="1.5" PointX="6" PointY="1.375" />
+        <EntityTypeShape EntityType="BootcampModel.tblTodoList" Width="1.5" PointX="0.75" PointY="3.75" />
+        <AssociationConnector Association="BootcampModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="BootcampModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="BootcampModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

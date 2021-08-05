@@ -11,6 +11,7 @@ namespace BootcampBackend.Controllers
 	public class ValuesController : ApiController
 	{
 		// GET api/<controller>l
+		[Authorize]
 		public IEnumerable<Deneme> Get()
 		{
 			BootcampEntities ent = new BootcampEntities();
